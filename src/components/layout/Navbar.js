@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import SignedInLinks from './SignedInLinks'
-import SignedOutLinks from './SignedOutLinks'
+import Login from '../Login'
+import Registration from '../Registration'
+// import SignedOutLinks from './SignedOutLinks'
 // import SearchForm from '../search/SearchForm'
 
 
@@ -15,8 +16,8 @@ const Navbar = () => {
     return (
     <nav  className="nav-wrapper blue lighten-1"  >
         <div className="container" > <Link to='/' style={divStyle}  className="brand-logo">DAD JOKES</Link>
-            <SignedInLinks />
-            <SignedOutLinks />
+            <Login />
+            <Registration />
             {/* <SearchForm /> */}
            
         </div>

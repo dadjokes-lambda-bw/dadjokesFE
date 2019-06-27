@@ -79,7 +79,7 @@ searchJoke = (list) => {
         </div>
       );
     }
-    let jokes = this.state.jokes.sort((a, b) => b.votes - a.votes);
+    let joke = this.state.jokes.sort((a, b) => b.votes - a.votes);
     return (
       
       <div className="JokeList">
