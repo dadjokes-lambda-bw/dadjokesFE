@@ -29,13 +29,14 @@ class Login extends React.Component {
         e.preventDefault();
         this.props.login(this.state.credentials)
         .then(() => {
-            this.props.history.push('/protected');
+            console.log('Look at me')
+            return this.props.history.push('/protected');
           });
     };
 
     render(){
         return (
-            <form className="sign-up">
+            <form className="sign-up" onSubmit={this.login}>
         <h1 className="sign-up-title">Sign up in seconds</h1>
         <input type="text" className="sign-up-input" placeholder="What's your username?" />
         <input type="password" className="sign-up-input" placeholder="Choose a password"/>
