@@ -8,6 +8,7 @@ import PrivateRoute from './components/PrivateRoute';
 import JokeList from './jokes/JokeList'
 import './css/App.css';
 import AddJoke from './components/AddJoke';
+import SearchForm from '../src/components/search/SearchForm'
 
 
 
@@ -22,7 +23,7 @@ class App extends Component {
         
       <div className="App">
         <Navbar />
-        {/* <SearchForm onSubmit={this.onSearchSubmit} /> */}
+        <SearchForm onSubmit={this.onSearchSubmit} />
         <Route exact path="/" component={JokeList} />
         <Route exact path="/signin" component={Login} />
         <Route exact path="/signup" component={Registration} />
