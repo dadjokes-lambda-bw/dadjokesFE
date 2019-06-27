@@ -1,12 +1,13 @@
 
 import React, { Component } from 'react'
-import { HashRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import Navbar from './components/layout/Navbar'
-import SignIn from './components/auth/SignIn'
-import SignUp from './components/auth/SignUp'
+import Login from './components/Login';
+import Registration from './components/Registration';
+import PrivateRoute from './components/PrivateRoute';
 import JokeList from './jokes/JokeList'
-import SearchForm from './components/search/SearchForm'
 import './css/App.css';
+import AddJoke from './components/AddJoke';
 
 
 
@@ -17,18 +18,23 @@ import './css/App.css';
 class App extends Component {
   render() {
     return (
-      <HashRouter>
+      
+        
       <div className="App">
         <Navbar />
-      <Switch>
-        <Route exact path = '/' component={JokeList} />
-        <Route exact path='/signin' component={SignIn} />
-        <Route exact path='/signup' component={SignUp} />
-        <Route exact path='/search' component={SearchForm} />
-        <SearchForm onSubmit={this.onSearchSubmit} />
-      </Switch>  
+        {/* <SearchForm onSubmit={this.onSearchSubmit} /> */}
+        <Route exact path="/" component={JokeList} />
+        <Route exact path="/signin" component={Login} />
+        <Route exact path="/signup" component={Registration} />
+        {/* <Route path='/search' component={SearchForm} /> */}
+        <PrivateRoute path="/protected" component={JokeList} />
+        <Switch>
+        <PrivateRoute path="/addjokes" component={AddJoke} /> 
+        </Switch>
+        {/* <PrivateRoute path="/addjokes" render={AddJoke} /> */}
       </div>
-      </HashRouter>
+      
+   
     )
   }
 }
@@ -38,3 +44,5 @@ class App extends Component {
 
 
 export default App;
+     
+    
