@@ -31,8 +31,10 @@
     "redux-thunk": "^2.3.0",
     "scss": "^0.2.4",
     "semantic-ui-react": "^0.87.2",
+
     "styled-components": "^4.3.2",
     "thunk": "0.0.1"
+
   },
   "scripts": {
     "start": "react-scripts start",
