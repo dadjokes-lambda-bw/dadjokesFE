@@ -37,7 +37,7 @@ class Login extends React.Component {
     render(){
         return (
             <form className="sign-up" onSubmit={this.login}>
-        <h1 className="sign-up-title">Sign up in seconds</h1>
+        <h1 className="sign-up-title">Please Sign In</h1>
         <input type="text" className="sign-up-input" placeholder="What's your username?" />
         <input type="password" className="sign-up-input" placeholder="Choose a password"/>
         <input type="submit" value="Sign me up!" className="sign-up-button"/>
