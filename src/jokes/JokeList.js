@@ -81,11 +81,12 @@ searchJoke = (list) => {
     }
     let joke = this.state.jokes.sort((a, b) => b.votes - a.votes);
     return (
-      
+      <div classname='container'>
+          <SearchForm className='search-bar' searchJoke = {this.searchJoke} />
       <div className="JokeList">
         <div className="top-word">
         </div>
-        <SearchForm searchJoke = {this.searchJoke} />
+      
         <div className="JokeList-sidebar">
           <h1 className="JokeList-title">
             <span>DAD</span> Jokes
@@ -110,6 +111,7 @@ searchJoke = (list) => {
             />
           ))}
         </div>
+      </div>
       </div>
     );
   }

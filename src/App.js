@@ -23,11 +23,11 @@ class App extends Component {
         
       <div className="App">
         <Navbar />
-        <SearchForm onSubmit={this.onSearchSubmit} />
+        {/* <Route path="searchjokes" onSubmit={this.onSearchSubmit} /> */}
         <Route exact path="/" component={JokeList} />
         <Route exact path="/signin" component={Login} />
         <Route exact path="/signup" component={Registration} />
-        {/* <Route path='/search' component={SearchForm} /> */}
+        {/* <Route path='/searchjokes' component={SearchForm} /> */}
         <PrivateRoute path="/protected" component={JokeList} />
         <Switch>
         <PrivateRoute path="/addjokes" component={AddJoke} /> 
