@@ -37,6 +37,7 @@ class Registration extends React.Component {
 
     render(){
         return (
+            
     <form className="sign-up">
         <h1 className="sign-up-title">Sign up in seconds</h1>
         <input type="text" className="sign-up-input" placeholder="What's your username?" />

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom'
 import { login } from '../actions/actions';
+import './Login.css'
 
 
 
@@ -34,12 +35,12 @@ class Login extends React.Component {
 
     render(){
         return (
-            <ul className="right">
-            <li><NavLink to='/'></NavLink></li>
-            <li><NavLink to='/'>Log Out</NavLink></li>
-            <li><NavLink to='/'>Add A Joke</NavLink></li>
-            {/* <li className="btn btn-floating pink lighten-3">DJ</li> */}
-        </ul>
+            <form className="sign-up">
+        <h1 className="sign-up-title">Sign up in seconds</h1>
+        <input type="text" className="sign-up-input" placeholder="What's your username?" />
+        <input type="password" className="sign-up-input" placeholder="Choose a password"/>
+        <input type="submit" value="Sign me up!" className="sign-up-button"/>
+  </form>
         )
     }
 

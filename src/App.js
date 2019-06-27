@@ -7,6 +7,7 @@ import Registration from './components/Registration';
 import PrivateRoute from './components/PrivateRoute';
 import JokeList from './jokes/JokeList'
 import './css/App.css';
+import AddJoke from './components/AddJoke';
 
 
 
@@ -17,8 +18,8 @@ import './css/App.css';
 class App extends Component {
   render() {
     return (
-      <Router>
-        <Switch>
+      
+        
       <div className="App">
         <Navbar />
         {/* <SearchForm onSubmit={this.onSearchSubmit} /> */}
@@ -27,9 +28,13 @@ class App extends Component {
         <Route exact path="/signup" component={Registration} />
         {/* <Route path='/search' component={SearchForm} /> */}
         <PrivateRoute path="/protected" component={JokeList} />
+        <Switch>
+        <PrivateRoute path="/addjokes" component={AddJoke} /> 
+        </Switch>
+        {/* <PrivateRoute path="/addjokes" render={AddJoke} /> */}
       </div>
-      </Switch>
-      </Router>
+      
+   
     )
   }
 }

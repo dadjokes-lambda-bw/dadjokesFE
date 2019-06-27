@@ -1,8 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Login from '../Login'
 import Registration from '../Registration'
-// import SignedOutLinks from './SignedOutLinks'
+import './Navbar.css'
+
 // import SearchForm from '../search/SearchForm'
 
 
@@ -13,17 +14,37 @@ const divStyle = {
 
 
 const Navbar = () => {
+    
     return (
-    <nav  className="nav-wrapper blue lighten-1"  >
-        <div className="container" > <Link to='/' style={divStyle}  className="brand-logo">DAD JOKES</Link>
-            <Login />
-            <Registration />
-            {/* <SearchForm /> */}
-           
+        <div className="nav">
+        <input type="checkbox" id="nav-check"/>
+        <div className="nav-header">
+          <div className="nav-title">
+            DAD JOKES
+          </div>
         </div>
-    </nav>
+        <div className="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <NavLink className="nav-links" to='/'>Home</NavLink>
+        <NavLink className="nav-links" to='/signin'>Sign In</NavLink>
+        <NavLink className="nav-links" to='/signup'>Sign Up</NavLink>
+        <NavLink className="nav-links" to='/addjokes'>Add Jokes</NavLink>
+        </div>
+       
+        
+    
+    
+    
+
     )
 }
+
+           
 
 
 

@@ -83,6 +83,8 @@ searchJoke = (list) => {
     return (
       
       <div className="JokeList">
+        <div className="top-word">
+        </div>
         <SearchForm searchJoke = {this.searchJoke} />
         <div className="JokeList-sidebar">
           <h1 className="JokeList-title">

@@ -1,64 +1,36 @@
 import { 
-    LOGIN_START, 
-    LOGIN_SUCCESS, 
-    LOGIN_FAILURE, 
-    REGISTRATION_START, 
-    REGISTRATION_SUCCESS, 
-    REGISTRATION_FAILURE 
-} from '../actions/actions';
+    ADD_JOKE_START, 
+    ADD_JOKE_SUCCESS, 
+    ADD_JOKE_FAILURE
+ 
+} from '../actions/addJokeAction';
 
 const initialState = {
 
     error: '',
-
-//user state
-    user: [],
-    isLoggingIn: false,
-    isRegistering: false,
-    isGettingUser: false,
-    isUpdatingUser: false,
-    isDeletingUser: false,
-    
 }
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
-        case LOGIN_START:
+        case ADD_JOKE_START:
             return {
                 ...state,
                 isLoggingIn: true,
                 error: ''
             }
-        case LOGIN_SUCCESS:
+        case ADD_JOKE_SUCCESS:
             return {
                 ...state,
-                isLoggingIn: false,
+                isLoggingIn: true,
                 error: ''
             }
-        case LOGIN_FAILURE:
+        case ADD_JOKE_FAILURE:
             return {
                 ...state,
                 isLoggingIn: false,
                 error: action.payload
             }
-        case REGISTRATION_START:
-            return {
-                ...state,
-                isRegistering: true,
-                error: ''
-            }
-        case REGISTRATION_SUCCESS:
-            return {
-                ...state,
-                isRegistering: false,
-                error: ''
-            }
-        case REGISTRATION_FAILURE:
-            return {
-                ...state,
-                isRegistering: false,
-                error: action.payload
-            }
+        
         default: 
             return state;;
     }
