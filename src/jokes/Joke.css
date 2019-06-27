@@ -17,7 +17,7 @@
 
 .Joke-text {
   width: 75%;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 .Joke-votes {
@@ -88,7 +88,7 @@
   animation-name: move-down;
   animation-duration: 0.7s;
   animation-timing-function: ease-out;
-  color: #f44336;
+  color: #3936f4;
 }
 @keyframes move-down {
   0%,
