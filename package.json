@@ -1,7 +1,7 @@
 {
   "name": "jokers",
   "version": "0.1.0",
-  "homepage": "https://sirandrewdillon.github.io/https://github.com/https://github.com/dadjokes-lambda-bw/dadjokesFE/tree/dillon",
+  "homepage": "https://github.com/dadjokes-lambda-bw/dadjokesFE",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
