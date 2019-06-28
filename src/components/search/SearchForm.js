@@ -29,7 +29,7 @@ class SearchForm extends Component {
       <div className="ui segment" >
         <form onSubmit={this.onSearchSubmit} className="ui form">
           <div className="field">
-            <h1><label htmlFor="search">Joke Search</label></h1>
+            <h1><label htmlFor="search">Search Jokes</label></h1>
           </div>
           <input type="text" value={this.state.searchText} onChange={(e) => this.setState({searchText: e.target.value})}/>
         </form>

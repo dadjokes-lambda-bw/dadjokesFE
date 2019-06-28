@@ -27,12 +27,10 @@ class App extends Component {
         <Route exact path="/" component={JokeList} />
         <Route exact path="/signin" component={Login} />
         <Route exact path="/signup" component={Registration} />
-        {/* <Route path='/searchjokes' component={SearchForm} /> */}
         <PrivateRoute path="/protected" component={JokeList} />
         <Switch>
         <PrivateRoute path="/addjokes" component={AddJoke} /> 
         </Switch>
-        {/* <PrivateRoute path="/addjokes" render={AddJoke} /> */}
       </div>
       
    

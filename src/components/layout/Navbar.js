@@ -1,14 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Login from '../Login';
-import Registration from '../Registration';
 import './Navbar.css';
 
-// import SearchForm from '../search/SearchForm'
 
-const divStyle = {
-  fontSize: '3em'
-};
 
 const Navbar = () => {
   return (

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Joke from './Joke';
 import axios from 'axios';
+import Typing from 'react-typing-animation';
 import './JokeList.css';
 import SearchForm from '../components/search/SearchForm'
 
@@ -74,12 +75,12 @@ searchJoke = (list) => {
     if (this.state.loading) {
       return (
         <div className="JokeList-spinner">
-          <i className="far fa-8x fa-laugh fa-spin" />
+          <i className="far fa-7x fa-laugh fa-spin" />
           <h1 className="JokeList-title">Dad Jokes Loading...</h1>
         </div>
       );
     }
-    let joke = this.state.jokes.sort((a, b) => b.votes - a.votes);
+
     return (
       <div classname='container'>
           <SearchForm className='search-bar' searchJoke = {this.searchJoke} />
@@ -89,7 +90,9 @@ searchJoke = (list) => {
       
         <div className="JokeList-sidebar">
           <h1 className="JokeList-title">
+            <Typing>
             <span>DAD</span> Jokes
+            </Typing>
           </h1>
           <img
             src="https://assets.dryicons.com/uploads/icon/svg/8927/0eb14c71-38f2-433a-bfc8-23d9c99b3647.svg"
